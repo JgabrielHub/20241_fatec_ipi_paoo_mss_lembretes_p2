@@ -24,6 +24,7 @@ app.get('/lembretes', (req, res) => res.send(lembretes))
 app.post('/eventos', (req, res) => {
   try{
     const evento = req.body
+    console.log(req.body)
     console.log(evento)
   }
   catch(e){}
