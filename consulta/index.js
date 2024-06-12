@@ -23,6 +23,12 @@ const funcoes = {
       baseConsolidada[observacao.lembreteId]['observacoes']
     const indice = observacoes.findIndex(o => o.id === observacao.id)
     observacoes[indice] = observacao
+  },
+  LembreteClassificado: (lembrete) => {
+    const lembreteExistente = baseConsolidada[lembrete.id]
+    if (lembreteExistente) {
+      lembreteExistente.status = lembrete.status
+    }
   }
 }
 
